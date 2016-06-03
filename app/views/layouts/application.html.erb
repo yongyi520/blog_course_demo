@@ -2,12 +2,20 @@
 <html>
 <head>
   <title>Blog</title>
+  <script src="https://use.fontawesome.com/7bc78102ea.js"></script>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<header id="main_navigation" class="clearfix">
+  <a href="#" class="name">Yongyi Xu</a>
+  <nav>
+    <%= link_to "Articles", posts_path %>
+    <a href="#">Projects</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
 <%= yield %>
 
 </body>
