@@ -28,6 +28,11 @@ $border: #E9E9E9;
   margin:0 auto;
 }
 
+.button_wrapper{
+  margin: 4em 0 0 0;
+  text-align: center;
+}
+
 .clearfix:before,
 .clearfix:after{
   content: ' ';
@@ -177,6 +182,13 @@ input[type="submit"], .button{
     border:2px solid $highlight;
     color: $highlight;
   }
+}
+
+.project_button{
+  background: $highlight;
+  color: $white;
+  text-decoration: none;
+  padding:1em 2em;
 }
 
 @import 'welcome';

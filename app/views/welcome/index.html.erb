@@ -10,21 +10,19 @@
     <h2>Stuffs I've Written</h2>
     <hr>
     
-    <% @post.each do |post| %>
+    <% @posts.each do |post| %>
         <h3><%= link_to post.title, post %></h3>
         <p class="date"><%= post.created_at.strftime("%A, %b %d") %></p>
     <% end %>
 
   </div>
   <div class="col-3 homepage_content">
-    <h2>Stuffs I've Written</h2>
+    <h2>Stuffs I've Built</h2>
     <hr>
-    <h3><a href="#">The Do List</a></h3>
-    <p class="date">Friday April 10th</p>
-    <h3><a href="#">My Future Plans</a></h3>
-    <p class="date">Friday April 9th</p>
-    <h3><a href="#">My Blog</a></h3>
-    <p class="date">Friday April 8th</p>
+    <% @projects.each do |project| %>
+        <h3><%= link_to project.title, project %></h3>
+        <p class="date"><%= project.created_at.strftime("%A, %b %d") %></p>
+    <% end %>
 
   </div>
 </div>
