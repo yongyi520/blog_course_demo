@@ -2,12 +2,12 @@
 
 
 <div id="post_wrapper" class="skinny_wrapper">
-  <%= @post.each do |post| %>
+  <% @posts.each do |post| %>
       <div class="post">
         <p class="date"><%= post.created_at.strftime('%A, %B %d') %></p>
         <h2><a href="#"><%= post.title %></a></h2>
         <hr>
       </div>
   <% end %>
-
+  <%= will_paginate @posts %>
 </div>

@@ -24,6 +24,52 @@
   }
 }
 
+//--pagination
+.pagination:before, .pagination:after {
+  content: " ";
+  display: table;
+}
+
+.pagination:after {
+  clear: both;
+}
+
+.pagination {
+  text-align: center;
+  margin:3em 0 0 0;
+  a, .previous_page, .current, .next_page {
+    padding:.75em  1em;
+    margin:0 .25em;
+    -webkit-border-radius:.15em;
+    -moz-border-radius:.15em;
+    border-radius:.15em;
+    line-height:20px;
+    text-decoration: none;
+    background: $white;
+    font-weight:700;
+    font-size:.7em;
+    font-style: normal;
+    color: $dark;
+    &:hover {
+      background: $highlight;
+      color: $white;
+    }
+  }
+  .current{
+    background: $highlight;
+    color: $white;
+  }
+
+  .disabled {
+    color: #c0c0c0;
+    &:hover {
+      color: #c0c0c0;
+      background: $white;
+    }
+  }
+}
+
+
 // ----- Post Show
 #post_show_content {
   header {
